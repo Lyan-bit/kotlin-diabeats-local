@@ -76,7 +76,7 @@ class ModelFacade private constructor(context: Context) {
 	            output[i] = outputVal.float
 	        }
 	        
-	    result = getSortedResult(output, labelsList).get(0).toString()
+	    result = getSortedResult(output, labelsList)[0].toString()
 	        
 	        diabeats.outcome = result
 	        persistDiabeats(diabeats)
@@ -112,7 +112,7 @@ class ModelFacade private constructor(context: Context) {
 	           val recognitions = ArrayList<Recognition>()
 	           val recognitionsSize = Math.min(pq.size, labelList.size)
 	    
-	           if (pq.size != 0) {
+	           if (pq.isNotEmpty()) {
 	               for (i in 0 until recognitionsSize) {
 	                   recognitions.add(pq.poll())
 	               }
