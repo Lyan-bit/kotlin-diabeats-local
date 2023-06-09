@@ -4,16 +4,16 @@ import java.util.ArrayList
 
 class DiabeatsVO  {
 
-    private var id: String = ""
-    private var pregnancies: Int = 0
-    private var glucose: Int = 0
-    private var bloodPressure: Int = 0
-    private var skinThickness: Int = 0
-    private var insulin: Int = 0
-    private var bmi: Double = 0.0
-    private var diabetesPedigreeFunction: Double = 0.0
-    private var age: Int = 0
-    private var outcome: String = ""
+ var id: String = ""
+     var pregnancies: Int = 0
+     var glucose: Int = 0
+     var bloodPressure: Int = 0
+     var skinThickness: Int = 0
+     var insulin: Int = 0
+     var bmi: Double = 0.0
+     var diabetesPedigreeFunction: Double = 0.0
+     var age: Int = 0
+     var outcome: String = ""
 
     constructor() {
     	//constructor
@@ -65,87 +65,6 @@ class DiabeatsVO  {
             res.add(list[i].toString())
         }
         return res
-    }
-    
-    fun getId(): String {
-        return id
-    }
-    
-    fun getPregnancies(): Int {
-        return pregnancies
-    }
-    
-    fun getGlucose(): Int {
-        return glucose
-    }
-    
-    fun getBloodPressure(): Int {
-        return bloodPressure
-    }
-    
-    fun getSkinThickness(): Int {
-        return skinThickness
-    }
-    
-    fun getInsulin(): Int {
-        return insulin
-    }
-    
-    fun getBmi(): Double {
-        return bmi
-    }
-    
-    fun getDiabetesPedigreeFunction(): Double {
-        return diabetesPedigreeFunction
-    }
-    
-    fun getAge(): Int {
-        return age
-    }
-    
-    fun getOutcome(): String {
-        return outcome
-    }
-    
-
-    fun setId(x: String) {
-    	id = x
-    }
-    
-    fun setPregnancies(x: Int) {
-    	pregnancies = x
-    }
-    
-    fun setGlucose(x: Int) {
-    	glucose = x
-    }
-    
-    fun setBloodPressure(x: Int) {
-    	bloodPressure = x
-    }
-    
-    fun setSkinThickness(x: Int) {
-    	skinThickness = x
-    }
-    
-    fun setInsulin(x: Int) {
-    	insulin = x
-    }
-    
-    fun setBmi(x: Double) {
-    	bmi = x
-    }
-    
-    fun setDiabetesPedigreeFunction(x: Double) {
-    	diabetesPedigreeFunction = x
-    }
-    
-    fun setAge(x: Int) {
-    	age = x
-    }
-    
-    fun setOutcome(x: String) {
-    	outcome = x
     }
     
 }
