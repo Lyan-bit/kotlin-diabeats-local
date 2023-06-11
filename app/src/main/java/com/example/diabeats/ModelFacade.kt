@@ -146,17 +146,17 @@ class ModelFacade private constructor(context: Context) {
 		var res = ArrayList<Diabeats>()
 			for (x in currentDiabeatss.indices) {
 					val vo: DiabeatsVO = currentDiabeatss[x]
-				    val itemx = Diabeats.createByPKDiabeats(vo.getId())
-	            itemx.id = vo.getId()
-            itemx.pregnancies = vo.getPregnancies()
-            itemx.glucose = vo.getGlucose()
-            itemx.bloodPressure = vo.getBloodPressure()
-            itemx.skinThickness = vo.getSkinThickness()
-            itemx.insulin = vo.getInsulin()
-            itemx.bmi = vo.getBmi()
-            itemx.diabetesPedigreeFunction = vo.getDiabetesPedigreeFunction()
-            itemx.age = vo.getAge()
-            itemx.outcome = vo.getOutcome()
+				    val itemx = Diabeats.createByPKDiabeats(vo.id)
+	            itemx.id = vo.id
+            itemx.pregnancies = vo.pregnancies
+            itemx.glucose = vo.glucose
+            itemx.bloodPressure = vo.bloodPressure
+            itemx.skinThickness = vo.skinThickness
+            itemx.insulin = vo.insulin
+            itemx.bmi = vo.bmi
+            itemx.diabetesPedigreeFunction = vo.diabetesPedigreeFunction
+            itemx.age = vo.age
+            itemx.outcome = vo.outcome
 			res.add(itemx)
 		}
 		return res
@@ -178,16 +178,16 @@ class ModelFacade private constructor(context: Context) {
 	        } else {
 	            val vo: DiabeatsVO = res[0]
 	            val itemx = Diabeats.createByPKDiabeats(value)
-            itemx.id = vo.getId()
-            itemx.pregnancies = vo.getPregnancies()
-            itemx.glucose = vo.getGlucose()
-            itemx.bloodPressure = vo.getBloodPressure()
-            itemx.skinThickness = vo.getSkinThickness()
-            itemx.insulin = vo.getInsulin()
-            itemx.bmi = vo.getBmi()
-            itemx.diabetesPedigreeFunction = vo.getDiabetesPedigreeFunction()
-            itemx.age = vo.getAge()
-            itemx.outcome = vo.getOutcome()
+            itemx.id = vo.id
+            itemx.pregnancies = vo.pregnancies
+            itemx.glucose = vo.glucose
+            itemx.bloodPressure = vo.bloodPressure
+            itemx.skinThickness = vo.skinThickness
+            itemx.insulin = vo.insulin
+            itemx.bmi = vo.bmi
+            itemx.diabetesPedigreeFunction = vo.diabetesPedigreeFunction
+            itemx.age = vo.age
+            itemx.outcome = vo.outcome
 	            itemx
 	        }
     }
@@ -200,7 +200,7 @@ class ModelFacade private constructor(context: Context) {
         currentDiabeatss = db.listDiabeats()
         val res: ArrayList<String> = ArrayList()
             for (diabeats in currentDiabeatss.indices) {
-                res.add(currentDiabeatss[diabeats].getId())
+                res.add(currentDiabeatss[diabeats].id)
             }
         return res
     }
